@@ -8,7 +8,7 @@ A clean and readable Pytorch implementation of CycleGAN (https://arxiv.org/abs/1
 3.  (Compare with other method)
 
 ## Getting Started
-Please firstly install[Anaconda](https://anaconda.org), if you not understand how to install whole procedures on Ubuntu system, you can take this [link] (https://stackoverflow.com/questions/28852841/install-anaconda-on-ubuntu-via-command-line) as reference.
+Please firstly install [Anaconda](https://anaconda.org), if you not understand how to install whole procedures on Ubuntu system, you can take this [link](https://stackoverflow.com/questions/28852841/install-anaconda-on-ubuntu-via-command-line) as reference.
 
 
 After finishing, you need to create an Anaconda environment using the environment.yml file.
