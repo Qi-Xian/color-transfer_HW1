@@ -24,7 +24,7 @@ source activate hw1
 
 Our current implementation supports GPU Card (Such as GTX-1060 up), you need to have one GPU (like GTX-1080-ti) and have CUDA libraries installed on your machine. 
 
-**(Don't use VMs running on Ubuntu Operation, because VMs can get the real GPU card)**
+**(Don't use VMs running on Ubuntu Operation, because VMs can not get the real GPU card)**
 
 ## Training
 ### 1. Download dataset
@@ -55,6 +55,8 @@ Alternatively you can build your own dataset by setting up the following directo
     |   |   └── testB              # Testing
     
 ### 2. Train
+
+Start to train, type the command as follow: 
 ```
 python train.py --dataroot datasets/<dataset_name>/ --cuda
 ```
@@ -63,11 +65,13 @@ This command would start a training session using the images under the *dataroot
 
 Both generators and discriminators weights will be saved ```./output/<dataset_name>/``` the output directory.
 
-If you don't own a GPU remove the --cuda option, although I advise you to get one!
+**If you don't own one GPU, remove the --cuda option, but you had better get one, becaue it is faster than CPU !**
 
 ## Testing
+After training, we can start to test.
+
 The pre-trained file is on [Google drive](https://drive.google.com/open?id=17FREtttCyFpvjRJxd4v3VVlVAu__Y5do). Download the file and save it on  ```./output/<dataset_name>/netG_A2B.pth``` and ```./output/<dataset_name>/netG_B2A.pth```. 
- 
+
 ```
 python test.py --dataroot datasets/<dataset_name>/ --cuda
 ```
